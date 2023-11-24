@@ -28,8 +28,6 @@ pipeline {
                         dependencyCheck additionalArguments: '''
                             --out "./"
                             --scan "./"
-                            --connectiontimeout	"20000"
-                            --readtimeout "120000"
                             --format "ALL"
                             --prettyPrint''', odcInstallation: 'dependency-check'
                         dependencyCheckPublisher pattern: 'dependency-check-report.xml'
