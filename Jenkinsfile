@@ -29,7 +29,8 @@ pipeline {
                             -o "./"
                             -s "./"
                             -f "ALL"
-                            --prettyPrint''', odcInstallation: 'dependency-check'
+                            --nvdApiKey "9aaa12f1-05e4-4ea2-bdf5-2c202451b0c7"
+                             --prettyPrint''', odcInstallation: 'dependency-check'
                         dependencyCheckPublisher pattern: 'dependency-check-report.xml'
                     }
         }
