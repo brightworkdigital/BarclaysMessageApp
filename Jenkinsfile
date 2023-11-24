@@ -29,6 +29,8 @@ pipeline {
                             --out "./"
                             --scan "./"
                             --nvdApiKey "9aaa12f1-05e4-4ea2-bdf5-2c202451b0c7"
+                            --connectiontimeout	"20000"
+                            --readtimeout "120000"
                             --format "ALL"
                             --prettyPrint''', odcInstallation: 'dependency-check'
                         dependencyCheckPublisher pattern: 'dependency-check-report.xml'
