@@ -5,6 +5,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.SequenceGenerator;
 
+import java.time.LocalTime;
+
 
 @SuppressWarnings("unused")
 @Entity
@@ -12,9 +14,19 @@ public class Person {
 
     @Id
     @GeneratedValue(generator = "person_sequence")
-    @SequenceGenerator(name="person_sequence", initialValue = 1)
+    @SequenceGenerator(name="person_sequence", initialValue = 100)
     private Long id;
     public Long getId() {return id;}
+
+    public LocalTime getLocalTime() {
+        return localTime;
+    }
+
+    public void setLocalTime(LocalTime localTime) {
+        this.localTime = localTime;
+    }
+
+    private LocalTime localTime;
 
     private String name;
     public String getName() {return name;}

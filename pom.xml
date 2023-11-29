@@ -6,12 +6,13 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.1.5</version>
+        <version>3.2.0</version>
+<!--        <version>3.1.5</version>-->
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
     <artifactId>BarclayMessage</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>BarclayMessage</name>
     <description>Demo project for Spring Boot</description>
     <properties>
@@ -27,7 +28,8 @@
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-            <version>2.2.0</version>
+            <version>LATEST</version>
+<!--            <version>2.2.0</version>-->
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -38,6 +40,7 @@
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
+            <version>LATEST</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
@@ -136,7 +139,18 @@
                     </execution>
                 </executions>
             </plugin>
-
+            <plugin>
+                <groupId>org.owasp</groupId>
+                <artifactId>dependency-check-maven</artifactId>
+                <version>8.3.1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 

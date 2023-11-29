@@ -8,7 +8,7 @@ public class Message {
 
     @Id
     @GeneratedValue(generator = "message_sequence")
-    @SequenceGenerator(name="message_sequence", initialValue = 1)
+    @SequenceGenerator(name="message_sequence", initialValue = 100)
     private Long id;
 
     @ManyToOne

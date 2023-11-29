@@ -114,6 +114,7 @@ public class AddMessageWithMockHttpRequestIT {
                   "content": "Josh's first message."
                 }""".formatted(0, existingPerson.getName(), existingPerson.getEmail());
 
+        @SuppressWarnings("unused")
         Message expectedMessage = this.objectMapper.readValue(json, Message.class);
 
         this.mockMvc.perform(MockMvcRequestBuilders.post("/messages")
